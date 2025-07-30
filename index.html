@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>ShoeWave</title>
+    <link href="assets/img/logo.jpg" rel="icon">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-card shadow-sm px-2 px-lg-5 py-1">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-semibold d-flex align-items-center" href="#">
+                <img src="assets/img/logo.jpg" alt="Logo" id="logo" class="me-2" width="40" height="40">
+                <h3 class="m-0 fw-bold">ShoeWave</h3>
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible nav links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-0 gap-md-3">
+                    <li class="nav-item">
+                        <a class="nav-link text-info border-bottom border-2 border-info" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item mx-2 py-3 py-md-0">
+                        <a class="btn login-btn w-100 btn-sm text-white fw-semibold" href="login.php">
+                            <i class="bi bi-box-arrow-in-right"></i> Login
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid p-0">
+        <section class="hero position-relative" id="hero">
+            <div id="heroCarousel" class="carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="hero-slide" style="background-image: url('assets/img/uploads/shoe1.jpg');"></div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="hero-slide" style="background-image: url('assets/img/uploads/shoe2.jpg');"></div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="carousel-item">
+                        <div class="hero-slide" style="background-image: url('assets/img/uploads/shoe3.jpg');"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-overlay d-flex flex-column justify-content-center align-items-center text-center">
+                <h1 class="text-white display-3 shado mb-3 animate__animated animate__fadeInDown fw-bold">
+                    STEP INTO <span class="text-info fw-bold"><u>STYLE</u></span>
+                </h1>
+                <p class="text-white animate__animated animate__fadeInUp lead">
+                    Discover shoes that blend comfort, performance and style — made for everyone, every step.
+                </p>
+            </div>
+        </section>
+        <div class="container-fluid mb-0 mb-md-4 overflow-hidden shadow-sm">
+            <div class="brand-slider d-flex p-3">
+                <!-- Duplicate images for seamless looping -->
+                <div class="slide-track d-flex">
+                    <img src="assets/img/adidas.jpg" alt="Adidas">
+                    <img src="assets/img/newBalance.jpg" alt="New Balance">
+                    <img src="assets/img/nike.jpg" alt="Nike">
+                    <img src="assets/img/puma.jpg" alt="Puma">
+                    <img src="assets/img/reebok.jpg" alt="Reebok">
+
+                    <!-- Repeat to create infinite loop -->
+                    <img src="assets/img/adidas.jpg" alt="Adidas">
+                    <img src="assets/img/newBalance.jpg" alt="New Balance">
+                    <img src="assets/img/nike.jpg" alt="Nike">
+                    <img src="assets/img/puma.jpg" alt="Puma">
+                    <img src="assets/img/reebok.jpg" alt="Reebok">
+
+                    <img src="assets/img/adidas.jpg" alt="Adidas">
+                    <img src="assets/img/newBalance.jpg" alt="New Balance">
+                    <img src="assets/img/nike.jpg" alt="Nike">
+                    <img src="assets/img/puma.jpg" alt="Puma">
+                    <img src="assets/img/reebok.jpg" alt="Reebok">
+
+                    <img src="assets/img/adidas.jpg" alt="Adidas">
+                    <img src="assets/img/newBalance.jpg" alt="New Balance">
+                    <img src="assets/img/nike.jpg" alt="Nike">
+                    <img src="assets/img/puma.jpg" alt="Puma">
+                    <img src="assets/img/reebok.jpg" alt="Reebok">
+                </div>
+            </div>
+        </div>
+
+
+
+        <section id="category" class="py-4 mb-4">
+            <div class="container d-none d-lg-block">
+                <div class="header">
+                    <h2 class="mb-4 fw-bold text-center">Shop by Category</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card h-100 product-card p-3 border-0">
+                            <img src="assets/img/running.jpg" class="card-img-top rounded category-img"
+                                alt="Running Category">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">
+                                    Running
+                                </h5>
+                                <p class="card-text">
+                                    Gear up for your run with performance-driven shoes built for speed and comfort. </p>
+                                <a href="#" class="btn btn-outline-dark w-100">
+                                    Shop Running
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card h-100 product-card p-3 border-0">
+                            <img src="assets/img/basketball.jpg" class="card-img-top rounded category-img"
+                                alt="Basketball Category">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">
+                                    Basketball
+                                </h5>
+                                <p class="card-text">
+                                    Dominate the court with shoes engineered for agility, grip, and support.</p>
+                                <a href="#" class="btn btn-outline-dark w-100">
+                                    Shop Basketball
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card h-100 product-card p-3 border-0">
+                            <img src="assets/img/casual.jpg" class="card-img-top rounded category-img"
+                                alt="Casual Category">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">
+                                    Casual
+                                </h5>
+                                <p class="card-text">
+                                    Step out in style with versatile shoes made for everyday streetwear fashion. </p>
+                                <a href="#" class="btn btn-outline-dark w-100">
+                                    Shop Casual
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container d-lg-none">
+                <div class="mb-3 d-flex justify-content-between align-items-center mb-2 px-2">
+                    <h3 class="mb-0 fw-bold">Shop by Category</h3>
+                    <div>
+                        <button class="btn btn-outline-dark btn-sm me-1" data-bs-target="#breakfastCarousel"
+                            data-bs-slide="prev"><i class="bi bi-caret-left small"></i></button>
+                        <button class="btn btn-outline-dark btn-sm" data-bs-target="#breakfastCarousel"
+                            data-bs-slide="next"><i class="bi bi-caret-right small"></i></button>
+                    </div>
+                </div>
+
+                <div id="breakfastCarousel" class="carousel slide" data-bs-ride="false">
+                    <div class="carousel-inner">
+                        <!-- First Slide -->
+                        <div class="carousel-item active">
+                            <div class="card h-100 product-card p-3 border-0">
+                                <img src="assets/img/running.jpg" class="card-img-top rounded category-img"
+                                    alt="Running Category">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">
+                                        Running
+                                    </h5>
+                                    <p class="card-text">
+                                        Gear up for your run with performance-driven shoes built for speed and comfort.
+                                    </p>
+                                    <a href="#" class="btn btn-outline-dark w-100">
+                                        Shop Running
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Second Slide -->
+                        <div class="carousel-item">
+                            <div class="card h-100 product-card p-3 border-0">
+                                <img src="assets/img/basketball.jpg" class="card-img-top rounded category-img"
+                                    alt="Basketball Category">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">
+                                        Basketball
+                                    </h5>
+                                    <p class="card-text">
+                                        Dominate the court with shoes engineered for agility, grip, and support.</p>
+                                    <a href="#" class="btn btn-outline-dark w-100">
+                                        Shop Basketball
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Third Slide -->
+                        <div class="carousel-item">
+                            <div class="card h-100 product-card p-3 border-0">
+                                <img src="assets/img/casual.jpg" class="card-img-top rounded category-img"
+                                    alt="Casual Category">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">
+                                        Casual
+                                    </h5>
+                                    <p class="card-text">
+                                        Step out in style with versatile shoes made for everyday streetwear fashion.
+                                    </p>
+                                    <a href="#" class="btn btn-outline-dark w-100">
+                                        Shop Casual
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <footer class="bg-light">
+        <div class="py-3 py-md-4 text-center">
+            <p class="small m-0" id="year"></p>
+        </div>
+    </footer>
+
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var year = new Date().getFullYear();
+        document.getElementById("year").innerHTML = `&copy; ${year} Designed By Flipped. All Rights Reserved.`;
+    </script>
+</body>
+
+</html>

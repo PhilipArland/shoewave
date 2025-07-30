@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>ShoeWave | Shop</title>
+    <link href="assets/img/logo.jpg" rel="icon">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-card shadow-sm px-2 px-lg-5 py-1">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-semibold d-flex align-items-center" href="#">
+                <img src="assets/img/logo.jpg" alt="Logo" id="logo" class="me-2" width="40" height="40">
+                <h3 class="m-0 fw-bold">ShoeWave</h3>
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible nav links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-0 gap-md-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-info border-bottom border-2 border-info" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item mx-2 py-3 py-md-0">
+                        <a class="btn login-btn w-100 btn-sm text-white fw-semibold" href="login.php">
+                            <i class="bi bi-box-arrow-in-right"></i> Login
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-3 py-lg-5">
+        <div class="container">
+            <form class="row gy-3 gx-3 gy-md-0 mb-4 align-items-end" method="GET" action="shop.html">
+                <div class="col-6 col-md-4">
+                    <label class="form-label">Search</label>
+                    <input type="text" name="search" class="form-control" placeholder="Search products...">
+                </div>
+
+                <div class="col-6 col-md-4">
+                    <label class="form-label">Category</label>
+                    <select name="category" class="form-select">
+                        <option value="">All Categories</option>
+                        <option value="">Running</option>
+                        <option value="">Basketball</option>
+                        <option value="">Casual</option>
+                    </select>
+                </div>
+
+                <div class="col-12 col-md-4 d-flex flex-md-row gap-2">
+                    <button type="submit" class="btn btn-dark w-100">
+                        <i class="bi bi-search me-1"></i> Filter
+                    </button>
+                    <a href="shop.html" class="btn btn-outline-secondary">
+                        <i class="bi bi-x-lg"></i>
+                    </a>
+                </div>
+            </form>
+
+            <h2 class="mb-4 text-center">All Products</h2>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card product-card p-3 border-0">
+                        <img src="assets/img/uploads/shoe1.jpg" class="card-img-top rounded" alt="Vaporfly 4 Proto">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Vaporfly 4 Proto</h5>
+                            <p class="card-text small">Engineered for race day, this ultra-lightweight shoe maximizes
+                                propulsion
+                                with ZoomX foam.</p>
+                            <p class="fw-bold text-primary">$249.99</p>
+                            <a href="#" class="btn btn-outline-dark w-100">View
+                                Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card product-card p-3 border-0">
+                        <img src="assets/img/uploads/shoe2.jpg" class="card-img-top rounded" alt="V2K Run">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">V2K Run</h5>
+                            <p class="card-text small">Engineered for race day, this ultra-lightweight shoe maximizes
+                                propulsion
+                                with ZoomX foam.</p>
+                            <p class="fw-bold text-primary">$249.99</p>
+                            <a href="#" class="btn btn-outline-dark w-100">View
+                                Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card product-card p-3 border-0">
+                        <img src="assets/img/uploads/shoe3.jpg" class="card-img-top rounded"
+                            alt="Giannis Immortality 4">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Giannis Immortality 4</h5>
+                            <p class="card-text small">Built for agility and energy return, this signature shoe features
+                                a secure fit and bold look.</p>
+                            <p class="fw-bold text-primary">$129.99</p>
+                            <a href="#" class="btn btn-outline-dark w-100">View
+                                Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card product-card p-3 border-0">
+                        <img src="assets/img/uploads/shoe4.jpg" class="card-img-top rounded" alt="Pegasus Trailer">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Pegasus Trailer</h5>
+                            <p class="card-text small">Versatile trail runner with React foam cushioning and durable
+                                traction.</p>
+                            <p class="fw-bold text-primary">$159.99</p>
+                            <a href="#" class="btn btn-outline-dark w-100">View
+                                Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card product-card p-3 border-0">
+                        <img src="assets/img/uploads/shoe5.jpg" class="card-img-top rounded" alt="SB Force 58">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">SB Force 58</h5>
+                            <p class="card-text small">Combining a skateboarding profile with a laid-back design – durable, cushioned, and stylish.</p>
+                            <p class="fw-bold text-primary">$94.99</p>
+                            <a href="#" class="btn btn-outline-dark w-100">View
+                                Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card product-card p-3 border-0">
+                        <img src="assets/img/uploads/shoe6.jpg" class="card-img-top rounded" alt="SB Dunk Low Pro">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">SB Dunk Low Pro</h5>
+                            <p class="card-text small">Iconic low-profile silhouette with premium suede and Zoom Air heel unit for all-day comfort.</p>
+                            <p class="fw-bold text-primary">$109.99</p>
+                            <a href="#" class="btn btn-outline-dark w-100">View
+                                Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="bg-light">
+        <div class="py-3 py-md-4 text-center">
+            <p class="small m-0" id="year"></p>
+        </div>
+    </footer>
+
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var year = new Date().getFullYear();
+        document.getElementById("year").innerHTML = `&copy; ${year} Designed By Flipped. All Rights Reserved.`;
+    </script>
+</body>
+
+</html>
