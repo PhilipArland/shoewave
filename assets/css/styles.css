@@ -136,14 +136,20 @@ body {
 }
 
 
+@media screen and (max-width: 768px) {
+    .brand-slider {
+        animation: scroll 10s linear infinite;
+    }
+}
+
 @media screen and (max-width: 576px) {
     .hero {
-        height: 35vh;
+        height: 50vh;
     }
 
     .hero-slide {
-        height: 30vh;
-        background-size: 350px;
+        height: 40vh;
+        background-size: 400px;
     }
 
     .hero-overlay p {
@@ -163,14 +169,16 @@ body {
         animation: scroll 10s linear infinite;
     }
 
+    .card-img-top {
+        height: 300px;
+    }
+
+    .about-container p {
+        font-size: 1rem;
+    }
+
     footer h6,
     .social-links {
         font-size: 0.8rem;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .brand-slider {
-        animation: scroll 10s linear infinite;
     }
 }
