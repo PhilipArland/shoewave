@@ -78,7 +78,7 @@ body {
 
 .category-img {
     width: 100%;
-    height: 500px;
+    height: 450px;
     object-fit: cover;
 }
 
@@ -129,9 +129,9 @@ body {
     box-shadow: 0 3px 6px rgba(13, 202, 240, 0.2);
 }
 
-
-.card-img-top {
-    height: 400px;
+.shop-img {
+    width: 100%;
+    height: 340px;
     object-fit: cover;
 }
 
@@ -157,6 +157,10 @@ body {
     }
 
     .category-img {
+        height: 350px;
+    }
+
+    .shop-img {
         height: 300px;
     }
 
@@ -167,10 +171,6 @@ body {
 
     .brand-slider {
         animation: scroll 10s linear infinite;
-    }
-
-    .card-img-top {
-        height: 300px;
     }
 
     .about-container p {
