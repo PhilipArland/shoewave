@@ -9,6 +9,36 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // =====================
+    // HERO CAROUSEL LOOP
+    // =====================
+    const images = [
+        "assets/img/uploads/shoes1.jpg",
+        "assets/img/uploads/shoes2.jpg",
+        "assets/img/uploads/shoes3.jpg",
+        "assets/img/uploads/shoes4.jpg",
+        "assets/img/uploads/shoes5.jpg",
+        "assets/img/uploads/shoes6.jpg",
+        "assets/img/uploads/shoes7.jpg",
+        "assets/img/uploads/shoes8.jpg",
+        "assets/img/uploads/shoes9.jpg"
+    ];
+
+    const carouselInner = document.getElementById("carouselInner");
+
+    if (carouselInner) {
+        images.forEach((img, index) => {
+            const item = document.createElement("div");
+            item.className = "carousel-item" + (index === 0 ? " active" : "");
+
+            item.innerHTML = `
+                <div class="hero-slide" style="background-image: url('${img}');"></div>
+            `;
+
+            carouselInner.appendChild(item);
+        });
+    }
+
+    // =====================
     // PRODUCT DATA
     // =====================
     const productsData = [
@@ -151,5 +181,18 @@ document.addEventListener("DOMContentLoaded", () => {
         categoryFilter.value = "";
         filterProducts();
     });
+
+    function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
+
+    // AUTO APPLY CATEGORY FROM URL
+    const urlCategory = getQueryParam("category");
+
+    if (urlCategory) {
+        categoryFilter.value = urlCategory;
+        filterProducts();
+    }
 
 });
