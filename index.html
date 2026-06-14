@@ -49,35 +49,7 @@
     <div class="container-fluid p-0">
         <section class="hero position-relative" id="hero">
             <div id="heroCarousel" class="carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="hero-slide" style="background-image: url('assets/img/uploads/shoes1.jpg');"></div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="hero-slide" style="background-image: url('assets/img/uploads/shoes2.jpg');"></div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="hero-slide" style="background-image: url('assets/img/uploads/shoes3.jpg');"></div>
-                    </div>
-                    <div class="carousel-item active">
-                        <div class="hero-slide" style="background-image: url('assets/img/uploads/shoes4.jpg');"></div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="hero-slide" style="background-image: url('assets/img/uploads/shoes5.jpg');"></div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="hero-slide" style="background-image: url('assets/img/uploads/shoes6.jpg');"></div>
-                    </div>
-                    <div class="carousel-item active">
-                        <div class="hero-slide" style="background-image: url('assets/img/uploads/shoes7.jpg');"></div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="hero-slide" style="background-image: url('assets/img/uploads/shoes8.jpg');"></div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="hero-slide" style="background-image: url('assets/img/uploads/shoes9.jpg');"></div>
-                    </div>
-                </div>
+                <div class="carousel-inner" id="carouselInner"></div>
             </div>
 
             <div class="hero-overlay d-flex flex-column justify-content-center align-items-center text-center">
@@ -91,7 +63,6 @@
         </section>
         <div class="container-fluid mb-0 mb-md-4 overflow-hidden shadow-sm">
             <div class="brand-slider d-flex p-3">
-                <!-- Duplicate images for seamless looping -->
                 <div class="slide-track d-flex">
                     <img src="assets/img/adidas.jpg" alt="Adidas">
                     <img src="assets/img/newBalance.jpg" alt="New Balance">
@@ -263,11 +234,7 @@
     </footer>
 
 
+    <script src="assets/js/main.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script>
-        var year = new Date().getFullYear();
-        document.getElementById("year").innerHTML = `&copy; ${year} Designed By Flipped. All Rights Reserved.`;
-    </script>
 </body>
-
 </html>

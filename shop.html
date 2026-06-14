@@ -12,32 +12,26 @@
 </head>
 
 <body>
+
+    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg bg-card shadow-sm px-2 px-lg-5 py-1">
         <div class="container-fluid">
             <a class="navbar-brand fw-semibold d-flex align-items-center" href="#">
-                <img src="assets/img/logo.jpg" alt="Logo" id="logo" class="me-2" width="40" height="40">
+                <img src="assets/img/logo.jpg" alt="Logo" class="me-2" width="40" height="40">
                 <h3 class="m-0 fw-bold">ShoeWave</h3>
             </a>
 
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Collapsible nav links -->
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto gap-0 gap-md-3">
+                <ul class="navbar-nav ms-auto gap-3">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-info border-bottom border-2 border-info" href="shop.html">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-info border-bottom border-2 border-info" href="shop.html">Shop</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
-                    </li>
-                    <li class="nav-item mx-2 py-3 py-md-0">
-                        <a class="btn login-btn w-100 btn-sm text-white fw-semibold" href="login.php">
+                        <a class="btn btn-sm btn-primary text-white fw-semibold" href="login.php">
                             <i class="bi bi-box-arrow-in-right"></i> Login
                         </a>
                     </li>
@@ -46,13 +40,17 @@
         </div>
     </nav>
 
+    <!-- FILTER -->
     <section class="py-3 py-lg-5">
         <div class="container">
+
             <form id="filterForm" class="row gy-3 gx-3 mb-4 align-items-end">
+
                 <div class="col-6 col-md-4">
                     <label class="form-label">Search</label>
                     <input type="text" id="searchInput" class="form-control" placeholder="Search products...">
                 </div>
+
                 <div class="col-6 col-md-4">
                     <label class="form-label">Category</label>
                     <select id="categoryFilter" class="form-select">
@@ -62,6 +60,7 @@
                         <option value="casual">Casual</option>
                     </select>
                 </div>
+
                 <div class="col-12 col-md-4 d-flex gap-2">
                     <button type="submit" class="btn btn-dark w-100">
                         <i class="bi bi-search"></i> Filter
@@ -70,167 +69,22 @@
                         <i class="bi bi-x-lg"></i>
                     </button>
                 </div>
+
             </form>
 
             <h2 class="mb-4 text-center">All Products</h2>
-
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="card product-card p-3 border-0">
-                        <img src="assets/img/uploads/shoe1.jpg" class="card-img-top shop-img rounded"
-                            alt="Vaporfly 4 Proto">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Vaporfly 4 Proto</h5>
-                            <p class="card-text small">Engineered for race day, this ultra-lightweight shoe maximizes
-                                propulsion
-                                with ZoomX foam.</p>
-                            <p class="fw-bold text-primary">$249.99</p>
-                            <a href="#" class="btn btn-outline-dark w-100">View
-                                Details</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="card product-card p-3 border-0">
-                        <img src="assets/img/uploads/shoe2.jpg" class="card-img-top shop-img rounded" alt="V2K Run">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">V2K Run</h5>
-                            <p class="card-text small">Engineered for race day, this ultra-lightweight shoe maximizes
-                                propulsion
-                                with ZoomX foam.</p>
-                            <p class="fw-bold text-primary">$249.99</p>
-                            <a href="#" class="btn btn-outline-dark w-100">View
-                                Details</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="card product-card p-3 border-0">
-                        <img src="assets/img/uploads/shoe3.jpg" class="card-img-top shop-img rounded"
-                            alt="Giannis Immortality 4">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Giannis Immortality 4</h5>
-                            <p class="card-text small">Built for agility and energy return, this signature shoe features
-                                a secure fit and bold look.</p>
-                            <p class="fw-bold text-primary">$129.99</p>
-                            <a href="#" class="btn btn-outline-dark w-100">View
-                                Details</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="card product-card p-3 border-0">
-                        <img src="assets/img/uploads/shoe4.jpg" class="card-img-top shop-img rounded"
-                            alt="Pegasus Trailer">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Pegasus Trailer</h5>
-                            <p class="card-text small">Versatile trail runner with React foam cushioning and durable
-                                traction.</p>
-                            <p class="fw-bold text-primary">$159.99</p>
-                            <a href="#" class="btn btn-outline-dark w-100">View
-                                Details</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="card product-card p-3 border-0">
-                        <img src="assets/img/uploads/shoe5.jpg" class="card-img-top shop-img rounded" alt="SB Force 58">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">SB Force 58</h5>
-                            <p class="card-text small">Combining a skateboarding profile with a laid-back design –
-                                durable, cushioned, and stylish.</p>
-                            <p class="fw-bold text-primary">$94.99</p>
-                            <a href="#" class="btn btn-outline-dark w-100">View
-                                Details</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="card product-card p-3 border-0">
-                        <img src="assets/img/uploads/shoe6.jpg" class="card-img-top shop-img rounded"
-                            alt="SB Dunk Low Pro">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">SB Dunk Low Pro</h5>
-                            <p class="card-text small">Iconic low-profile silhouette with premium suede and Zoom Air
-                                heel unit for all-day comfort.</p>
-                            <p class="fw-bold text-primary">$109.99</p>
-                            <a href="#" class="btn btn-outline-dark w-100">View
-                                Details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="row g-4" id="productGrid"></div>
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="bg-light">
-        <div class="py-3 py-md-4 text-center">
-            <p class="small m-0" id="year"></p>
+        <div class="py-3 text-center">
+            <p id="year" class="m-0 small"></p>
         </div>
     </footer>
 
-
+    <script src="assets/js/main.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Footer Year
-        document.getElementById("year").innerHTML =
-            `&copy; ${new Date().getFullYear()} Designed By Flipped. All Rights Reserved.`;
-
-        const filterForm = document.getElementById("filterForm");
-        const searchInput = document.getElementById("searchInput");
-        const categoryFilter = document.getElementById("categoryFilter");
-        const resetButton = document.getElementById("resetFilter");
-        const products = document.querySelectorAll(".product-item");
-
-        function filterProducts() {
-            const searchText = searchInput.value.toLowerCase().trim();
-            const selectedCategory = categoryFilter.value;
-
-            products.forEach(product => {
-                const title = product
-                    .querySelector(".card-title")
-                    .textContent
-                    .toLowerCase();
-
-                const category = product.dataset.category;
-
-                const matchesSearch =
-                    title.includes(searchText);
-
-                const matchesCategory =
-                    selectedCategory === "" ||
-                    category === selectedCategory;
-
-                if (matchesSearch && matchesCategory) {
-                    product.style.display = "";
-                } else {
-                    product.style.display = "none";
-                }
-            });
-        }
-
-        filterForm.addEventListener("submit", function (e) {
-            e.preventDefault();
-            filterProducts();
-        });
-
-        categoryFilter.addEventListener("change", filterProducts);
-
-        resetButton.addEventListener("click", function () {
-            searchInput.value = "";
-            categoryFilter.value = "";
-            filterProducts();
-        });
-    </script>
-    <script>
-        var year = new Date().getFullYear();
-        document.getElementById("year").innerHTML = `&copy; ${year} Designed By Flipped. All Rights Reserved.`;
-    </script>
 </body>
-
 </html>

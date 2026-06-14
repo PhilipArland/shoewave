@@ -73,83 +73,7 @@
             </form>
 
             <h2 class="mb-4 text-center">All Products</h2>
-
-            <!-- PRODUCTS -->
-            <div class="row g-4">
-
-                <!-- PRODUCT 1 -->
-                <div class="col-md-6 col-lg-4 product-item" data-category="running">
-                    <div class="card p-3 border-0">
-                        <img src="assets/img/uploads/shoe1.jpg" class="card-img-top rounded">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Vaporfly 4 Proto</h5>
-                            <p class="small">Race day performance shoe with ZoomX foam.</p>
-                            <p class="fw-bold text-primary">$249.99</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PRODUCT 2 -->
-                <div class="col-md-6 col-lg-4 product-item" data-category="running">
-                    <div class="card p-3 border-0">
-                        <img src="assets/img/uploads/shoe2.jpg" class="card-img-top rounded">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">V2K Run</h5>
-                            <p class="small">Lightweight running sneaker with modern design.</p>
-                            <p class="fw-bold text-primary">$249.99</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PRODUCT 3 -->
-                <div class="col-md-6 col-lg-4 product-item" data-category="basketball">
-                    <div class="card p-3 border-0">
-                        <img src="assets/img/uploads/shoe3.jpg" class="card-img-top rounded">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Giannis Immortality 4</h5>
-                            <p class="small">Built for agility and fast movements.</p>
-                            <p class="fw-bold text-primary">$129.99</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PRODUCT 4 -->
-                <div class="col-md-6 col-lg-4 product-item" data-category="running">
-                    <div class="card p-3 border-0">
-                        <img src="assets/img/uploads/shoe4.jpg" class="card-img-top rounded">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Pegasus Trail</h5>
-                            <p class="small">Durable trail running shoe with grip support.</p>
-                            <p class="fw-bold text-primary">$159.99</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PRODUCT 5 -->
-                <div class="col-md-6 col-lg-4 product-item" data-category="casual">
-                    <div class="card p-3 border-0">
-                        <img src="assets/img/uploads/shoe5.jpg" class="card-img-top rounded">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">SB Force 58</h5>
-                            <p class="small">Skate-inspired casual everyday shoe.</p>
-                            <p class="fw-bold text-primary">$94.99</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PRODUCT 6 -->
-                <div class="col-md-6 col-lg-4 product-item" data-category="casual">
-                    <div class="card p-3 border-0">
-                        <img src="assets/img/uploads/shoe6.jpg" class="card-img-top rounded">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">SB Dunk Low Pro</h5>
-                            <p class="small">Classic skate shoe with premium comfort.</p>
-                            <p class="fw-bold text-primary">$109.99</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+            <div class="row g-4" id="productGrid"></div>
         </div>
     </section>
 
@@ -160,47 +84,7 @@
         </div>
     </footer>
 
+    <script src="assets/js/main.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- FILTER SCRIPT -->
-    <script>
-        const filterForm = document.getElementById("filterForm");
-        const searchInput = document.getElementById("searchInput");
-        const categoryFilter = document.getElementById("categoryFilter");
-        const resetButton = document.getElementById("resetFilter");
-        const products = document.querySelectorAll(".product-item");
-
-        function filterProducts() {
-            const searchText = searchInput.value.toLowerCase().trim();
-            const category = categoryFilter.value;
-
-            products.forEach(product => {
-                const title = product.querySelector(".card-title").textContent.toLowerCase();
-                const productCategory = product.dataset.category;
-
-                const matchSearch = title.includes(searchText);
-                const   matchCategory = !category || productCategory === category;
-
-                product.style.display = (matchSearch && matchCategory) ? "" : "none";
-            });
-        }
-
-        filterForm.addEventListener("submit", function (e) {
-            e.preventDefault();
-            filterProducts();
-        });
-
-        categoryFilter.addEventListener("change", filterProducts);
-
-        resetButton.addEventListener("click", function () {
-            searchInput.value = "";
-            categoryFilter.value = "";
-            filterProducts();
-        });
-
-        document.getElementById("year").innerHTML =
-            `&copy; ${new Date().getFullYear()} Designed By Flipped. All Rights Reserved.`;
-    </script>
-
 </body>
 </html>
