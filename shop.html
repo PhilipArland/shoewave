@@ -48,29 +48,27 @@
 
     <section class="py-3 py-lg-5">
         <div class="container">
-            <form class="row gy-3 gx-3 gy-md-0 mb-4 align-items-end" method="GET" action="shop.html">
+            <form id="filterForm" class="row gy-3 gx-3 mb-4 align-items-end">
                 <div class="col-6 col-md-4">
                     <label class="form-label">Search</label>
-                    <input type="text" name="search" class="form-control" placeholder="Search products...">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Search products...">
                 </div>
-
                 <div class="col-6 col-md-4">
                     <label class="form-label">Category</label>
-                    <select name="category" class="form-select">
+                    <select id="categoryFilter" class="form-select">
                         <option value="">All Categories</option>
-                        <option value="">Running</option>
-                        <option value="">Basketball</option>
-                        <option value="">Casual</option>
+                        <option value="running">Running</option>
+                        <option value="basketball">Basketball</option>
+                        <option value="casual">Casual</option>
                     </select>
                 </div>
-
-                <div class="col-12 col-md-4 d-flex flex-md-row gap-2">
+                <div class="col-12 col-md-4 d-flex gap-2">
                     <button type="submit" class="btn btn-dark w-100">
-                        <i class="bi bi-search me-1"></i> Filter
+                        <i class="bi bi-search"></i> Filter
                     </button>
-                    <a href="shop.html" class="btn btn-outline-secondary">
+                    <button type="button" id="resetFilter" class="btn btn-outline-secondary">
                         <i class="bi bi-x-lg"></i>
-                    </a>
+                    </button>
                 </div>
             </form>
 
@@ -79,7 +77,8 @@
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4">
                     <div class="card product-card p-3 border-0">
-                        <img src="assets/img/uploads/shoe1.jpg" class="card-img-top shop-img rounded" alt="Vaporfly 4 Proto">
+                        <img src="assets/img/uploads/shoe1.jpg" class="card-img-top shop-img rounded"
+                            alt="Vaporfly 4 Proto">
                         <div class="card-body text-center">
                             <h5 class="card-title">Vaporfly 4 Proto</h5>
                             <p class="card-text small">Engineered for race day, this ultra-lightweight shoe maximizes
@@ -124,7 +123,8 @@
 
                 <div class="col-md-6 col-lg-4">
                     <div class="card product-card p-3 border-0">
-                        <img src="assets/img/uploads/shoe4.jpg" class="card-img-top shop-img rounded" alt="Pegasus Trailer">
+                        <img src="assets/img/uploads/shoe4.jpg" class="card-img-top shop-img rounded"
+                            alt="Pegasus Trailer">
                         <div class="card-body text-center">
                             <h5 class="card-title">Pegasus Trailer</h5>
                             <p class="card-text small">Versatile trail runner with React foam cushioning and durable
@@ -141,7 +141,8 @@
                         <img src="assets/img/uploads/shoe5.jpg" class="card-img-top shop-img rounded" alt="SB Force 58">
                         <div class="card-body text-center">
                             <h5 class="card-title">SB Force 58</h5>
-                            <p class="card-text small">Combining a skateboarding profile with a laid-back design – durable, cushioned, and stylish.</p>
+                            <p class="card-text small">Combining a skateboarding profile with a laid-back design –
+                                durable, cushioned, and stylish.</p>
                             <p class="fw-bold text-primary">$94.99</p>
                             <a href="#" class="btn btn-outline-dark w-100">View
                                 Details</a>
@@ -151,10 +152,12 @@
 
                 <div class="col-md-6 col-lg-4">
                     <div class="card product-card p-3 border-0">
-                        <img src="assets/img/uploads/shoe6.jpg" class="card-img-top shop-img rounded" alt="SB Dunk Low Pro">
+                        <img src="assets/img/uploads/shoe6.jpg" class="card-img-top shop-img rounded"
+                            alt="SB Dunk Low Pro">
                         <div class="card-body text-center">
                             <h5 class="card-title">SB Dunk Low Pro</h5>
-                            <p class="card-text small">Iconic low-profile silhouette with premium suede and Zoom Air heel unit for all-day comfort.</p>
+                            <p class="card-text small">Iconic low-profile silhouette with premium suede and Zoom Air
+                                heel unit for all-day comfort.</p>
                             <p class="fw-bold text-primary">$109.99</p>
                             <a href="#" class="btn btn-outline-dark w-100">View
                                 Details</a>
@@ -165,30 +168,6 @@
         </div>
     </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <footer class="bg-light">
         <div class="py-3 py-md-4 text-center">
             <p class="small m-0" id="year"></p>
@@ -197,6 +176,57 @@
 
 
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Footer Year
+        document.getElementById("year").innerHTML =
+            `&copy; ${new Date().getFullYear()} Designed By Flipped. All Rights Reserved.`;
+
+        const filterForm = document.getElementById("filterForm");
+        const searchInput = document.getElementById("searchInput");
+        const categoryFilter = document.getElementById("categoryFilter");
+        const resetButton = document.getElementById("resetFilter");
+        const products = document.querySelectorAll(".product-item");
+
+        function filterProducts() {
+            const searchText = searchInput.value.toLowerCase().trim();
+            const selectedCategory = categoryFilter.value;
+
+            products.forEach(product => {
+                const title = product
+                    .querySelector(".card-title")
+                    .textContent
+                    .toLowerCase();
+
+                const category = product.dataset.category;
+
+                const matchesSearch =
+                    title.includes(searchText);
+
+                const matchesCategory =
+                    selectedCategory === "" ||
+                    category === selectedCategory;
+
+                if (matchesSearch && matchesCategory) {
+                    product.style.display = "";
+                } else {
+                    product.style.display = "none";
+                }
+            });
+        }
+
+        filterForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            filterProducts();
+        });
+
+        categoryFilter.addEventListener("change", filterProducts);
+
+        resetButton.addEventListener("click", function () {
+            searchInput.value = "";
+            categoryFilter.value = "";
+            filterProducts();
+        });
+    </script>
     <script>
         var year = new Date().getFullYear();
         document.getElementById("year").innerHTML = `&copy; ${year} Designed By Flipped. All Rights Reserved.`;

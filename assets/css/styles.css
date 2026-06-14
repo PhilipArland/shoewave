@@ -27,14 +27,14 @@ body {
 }
 
 .hero {
-    height: 70vh;
+    height: 80vh;
     overflow: hidden;
     position: relative;
 }
 
 .hero-slide {
-    height: 55vh;
-    background-size: 650px;
+    height: 60vh;
+    background-size: 700px;
     background-repeat: no-repeat;
     background-position: center;
     transform: rotate(-15deg);
